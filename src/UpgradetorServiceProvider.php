@@ -28,16 +28,18 @@ class UpgradetorServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../database/migrations/2023_04_29_075643_create_versions_table.php' => base_path('/database/migrations'),
-        ], 'upgradetor-migrations');
+        ], 'upgradetor::migrations');
         $this->publishes([
             __DIR__ . '/Console/Commands' => base_path('/app/Console/Commands'),
-        ], 'upgradetor-commands');
+        ], 'upgradetor::commands');
         if ($this->app->runningInConsole()) {
             $this->commands([
                 ActionDowngradeSystem::class,
                 ActionUpdateSystem::class,
                 MakeUpgradeFile::class,
             ]);
+            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
         }
 
     }
