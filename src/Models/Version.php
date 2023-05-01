@@ -1,6 +1,6 @@
 <?php
 
-namespace Alimi7372\Upgradetor\Models\Version;
+namespace Alimi7372\Upgradetor\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
