@@ -1,6 +1,6 @@
 <?php
 
-namespace Upgradetor\Console\Commands;
+namespace Alimi7372\Upgradetor\Console\Commands;
 
 use Carbon\Carbon;
 use Illuminate\Console\Command;

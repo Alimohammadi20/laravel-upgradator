@@ -2,9 +2,9 @@
 
 namespace Alimi7372\Upgradetor;
 
-use Upgradetor\Console\Commands\ActionDowngradeSystem;
-use Upgradetor\Console\Commands\ActionUpdateSystem;
-use Upgradetor\Console\Commands\MakeUpgradeFile;
+use Alimi7372\Upgradetor\Console\Commands\ActionDowngradeSystem;
+use Alimi7372\Upgradetor\Console\Commands\ActionUpdateSystem;
+use Alimi7372\Upgradetor\Console\Commands\MakeUpgradeFile;
 use Illuminate\Support\ServiceProvider;
 
 class UpgradetorServiceProvider extends ServiceProvider
@@ -32,10 +32,13 @@ class UpgradetorServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/Console/Commands' => base_path('/app/Console/Commands'),
         ], 'upgradetor-commands');
-        $this->commands([
-            ActionDowngradeSystem::class,
-            ActionUpdateSystem::class,
-            MakeUpgradeFile::class,
-        ]);
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                ActionDowngradeSystem::class,
+                ActionUpdateSystem::class,
+                MakeUpgradeFile::class,
+            ]);
+        }
+
     }
 }
