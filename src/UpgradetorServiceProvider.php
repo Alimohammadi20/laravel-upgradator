@@ -2,9 +2,9 @@
 
 namespace Alimi7372\Upgradetor;
 
-use Console\Commands\ActionDowngradeSystem;
-use Console\Commands\ActionUpdateSystem;
-use Console\Commands\MakeUpgradeFile;
+use Upgradetor\Console\Commands\ActionDowngradeSystem;
+use Upgradetor\Console\Commands\ActionUpdateSystem;
+use Upgradetor\Console\Commands\MakeUpgradeFile;
 use Illuminate\Support\ServiceProvider;
 
 class UpgradetorServiceProvider extends ServiceProvider

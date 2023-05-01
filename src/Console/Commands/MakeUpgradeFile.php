@@ -1,6 +1,6 @@
 <?php
 
-namespace Console\Commands;
+namespace Upgradetor\Console\Commands;
 
 use Carbon\Carbon;
 use Illuminate\Console\Command;
