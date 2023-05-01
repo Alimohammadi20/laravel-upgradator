@@ -1,6 +1,6 @@
 <?php
 
-namespace SystemUpdator\Enums;
+namespace Alimi7372\Upgradetor\Enums;
 
 enum Type : string
 {

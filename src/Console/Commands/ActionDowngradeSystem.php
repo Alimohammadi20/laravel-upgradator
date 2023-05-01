@@ -3,7 +3,7 @@
 namespace Alimi7372\Upgradetor\Console\Commands;
 
 use Illuminate\Console\Command;
-use SystemUpdator\Upgradetor;
+use Alimi7372\Upgradetor\Upgradetor;
 
 class ActionDowngradeSystem extends Command
 {

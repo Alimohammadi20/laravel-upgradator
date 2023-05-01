@@ -1,6 +1,6 @@
 <?php
 
-namespace SystemUpdator;
+namespace Alimi7372\Upgradetor;
 
 abstract class Upgrade
 {
