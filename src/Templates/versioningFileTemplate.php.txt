@@ -1,0 +1,23 @@
+<?php
+
+namespace SystemUpdator\Versions;
+
+use SystemUpdator\Upgrade;
+
+return new class extends Upgrade
+{
+
+    protected string $description = "description";
+    protected string $date = "@date";
+    protected string $version = "@version";
+
+    public function up()
+    {
+        // TODO: Implement up() method.
+    }
+
+    public function down()
+    {
+        // TODO: Implement down() method.
+    }
+};

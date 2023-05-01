@@ -1,0 +1,27 @@
+{
+    "name": "alimi7372/upgradetor",
+    "description": "a package for upgrade a application when it was live and have some change or required runnung console command",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Alimi7372\\Upgradetor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ali Mohammadi",
+            "email": "Alimohi8118@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alimi7372\\Upgradetor\\UpgradetorServiceProvider"
+            ]
+        }
+    }
+}
