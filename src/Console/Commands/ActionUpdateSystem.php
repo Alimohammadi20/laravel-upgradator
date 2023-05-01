@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\SystemUpdator\src\Console\Commands;
+namespace Console\Commands;
 
 use Illuminate\Console\Command;
 use SystemUpdator\Upgradetor;
