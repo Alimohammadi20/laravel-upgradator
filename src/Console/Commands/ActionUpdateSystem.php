@@ -3,7 +3,7 @@
 namespace Alimi7372\Upgradetor\Console\Commands;
 
 use Illuminate\Console\Command;
-use SystemUpdator\Upgradetor;
+use Alimi7372\Upgradetor\Facades\Upgradetor;
 
 class ActionUpdateSystem extends Command
 {
@@ -26,10 +26,10 @@ class ActionUpdateSystem extends Command
      *
      * @return int
      */
-    public function handle(Upgradetor $upgradetor)
+    public function handle()
     {
         $version = $this->argument('specificVersion');
-        ($version) ? $upgradetor->upgrade($version) : $upgradetor->upgrade();
+        ($version) ? Upgradetor::upgrade($version) : Upgradetor::upgrade();
         return Command::SUCCESS;
     }
 }
