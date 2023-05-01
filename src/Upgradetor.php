@@ -4,9 +4,9 @@ namespace Alimi7372\Upgradetor;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
-use SystemUpdator\Enums\Type;
-use SystemUpdator\Enums\Status;
-use SystemUpdator\Models\Version;
+use Alimi7372\Upgradetor\Enums\Type;
+use Alimi7372\Upgradetor\Enums\Status;
+use Alimi7372\Upgradetor\Models\Version;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
 class Upgradetor
