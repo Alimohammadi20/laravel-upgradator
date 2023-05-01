@@ -32,17 +32,10 @@ class UpgradetorServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/Console/Commands' => base_path('/app/Console/Commands'),
         ], 'upgradetor-commands');
-        $this->app->singleton(
-            'command.upgradetor.downgrade',
-            ActionDowngradeSystem::class
-        );
-        $this->app->singleton(
-            'command.upgradetor.upgrade',
-            ActionUpdateSystem::class
-        );
-        $this->app->singleton(
-            'command.upgradetor.make.file',
-            MakeUpgradeFile::class
-        );
+        $this->commands([
+            ActionDowngradeSystem::class,
+            ActionUpdateSystem::class,
+            MakeUpgradeFile::class,
+        ]);
     }
 }
