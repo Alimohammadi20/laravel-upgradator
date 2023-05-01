@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Alimi7372\\Upgradetor\\UpgradetorServiceProvider"
+                "alimi7372\\upgradetor\\UpgradetorServiceProvider"
             ]
         }
     }
