@@ -22,6 +22,9 @@
             "providers": [
                 "Alimi7372\\Upgradetor\\UpgradetorServiceProvider"
             ]
+        },
+        "aliases": {
+            "Upgradetor": "Alimi7372\\Upgradetor\\Facades\\Upgradetor"
         }
     }
 }

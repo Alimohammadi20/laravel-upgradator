@@ -28,7 +28,7 @@ class UpgradetorServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../database/migrations/2023_04_29_075643_create_versions_table.php' => base_path('/database/migrations'),
-        ], 'upgradetor::migrations');
+        ], 'upgradator::migrations');
         $this->publishes([
             __DIR__ . '/Console/Commands' => base_path('/app/Console/Commands'),
         ], 'upgradetor::commands');
