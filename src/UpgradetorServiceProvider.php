@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\SystemUpdator\src;
+namespace Alimi7372\Upgradetor;
 
 use Illuminate\Support\ServiceProvider;
 
