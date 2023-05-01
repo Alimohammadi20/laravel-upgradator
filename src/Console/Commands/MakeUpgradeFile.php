@@ -32,7 +32,7 @@ class MakeUpgradeFile extends Command
         $version = $this->argument('version');
         $versionFileName = 'v' . str_replace('.', '_',$version ).'.php';
         $date = Carbon::now()->format('Y/m/d  h:i');
-        $file = file_get_contents(__DIR__ . '/../Templates/versioningFileTemplate.php.txt');
+        $file = file_get_contents(__DIR__ . '/../../Templates/versioningFileTemplate.php.txt');
         $file = str_replace(['@date','@version'], [$date,$version], $file);
         File::put(base_path('/versions/') . $versionFileName , $file);
         return Command::SUCCESS;
