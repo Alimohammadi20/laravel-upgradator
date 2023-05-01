@@ -2,6 +2,9 @@
 
 namespace Alimi7372\Upgradetor;
 
+use Console\Commands\ActionDowngradeSystem;
+use Console\Commands\ActionUpdateSystem;
+use Console\Commands\MakeUpgradeFile;
 use Illuminate\Support\ServiceProvider;
 
 class UpgradetorServiceProvider extends ServiceProvider
@@ -27,19 +30,19 @@ class UpgradetorServiceProvider extends ServiceProvider
             __DIR__ . '/../database/migrations/2023_04_29_075643_create_versions_table.php' => base_path('/database/migrations'),
         ], 'upgradetor-migrations');
         $this->publishes([
-            __DIR__ . '/Commands' => base_path('/app/Console/Commands'),
+            __DIR__ . '/Console/Commands' => base_path('/app/Console/Commands'),
         ], 'upgradetor-commands');
         $this->app->singleton(
             'command.upgradetor.downgrade',
-             Console\Commands\ActionDowngradeSystem::class
+            ActionDowngradeSystem::class
         );
         $this->app->singleton(
             'command.upgradetor.upgrade',
-            Console\Commands\ActionUpdateSystem::class
+            ActionUpdateSystem::class
         );
         $this->app->singleton(
             'command.upgradetor.make.file',
-            Console\Commands\MakeUpgradeFile::class
+            MakeUpgradeFile::class
         );
     }
 }
