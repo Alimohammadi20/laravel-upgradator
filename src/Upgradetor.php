@@ -106,7 +106,9 @@ class Upgradetor
                 ]);
             }
         } else {
-            $version->delete();
+            if ($version){
+                $version->delete();
+            }
         }
     }
 
