@@ -22,16 +22,21 @@ After that you should run laravel `migrate` command:
 ```
 php artisan migrate
 ```
-<br>
+
 # Usage
+
 You can now add new version to keep your main database records changes or run  commands or command after update your project:
+
 ```
 php artisan version:make yourVersion
-```
+``` 
+
 For example:
+
 ```
 php artisan version:make 1.0.0
 ```
+
 You can write your script to run after update in versioning file on `your-project-path/versions`.
 Versioning File:
 
