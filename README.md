@@ -4,13 +4,6 @@ A Easy way to upgrade your laravel application when the application on productio
 </p>
 
 
-<p align="center">
-<a href="https://packagist.org/packages/alimi7372/upgradetor" target="_blank">
-[![Latest Stable Version](http://poser.pugx.org/alimi7372/upgradetor/v)](https://packagist.org/packages/alimi7372/upgradetor)</a>
-<a href="https://packagist.org/packages/alimi7372/upgradetor" target="_blank">
-[![Total Downloads](http://poser.pugx.org/alimi7372/upgradetor/downloads)](https://packagist.org/packages/alimi7372/upgradetor)</a>
-</p>
-
 # Install
 
 To get started with LaravelUpgradetor, use Composer to add the package to your project's dependencies:
